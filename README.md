@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-# connecting-to-esewa
-=======
+
+# Connecting-to-Esewa
+
 # US to eSewa Remittance Application
 
 Remitly-like money transfer app: send from US debit cards or bank accounts to eSewa wallets in Nepal.
