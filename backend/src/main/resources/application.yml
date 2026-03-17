@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: us-to-esewa
+  datasource:
+    url: jdbc:h2:mem:ustoesewa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:your-256-bit-secret-key-change-in-production-min-32-chars}
+    access-token-validity: 3600000
+    refresh-token-validity: 86400000
+  stripe:
+    secret-key: ${STRIPE_SECRET_KEY:sk_test_placeholder}
+    webhook-secret: ${STRIPE_WEBHOOK_SECRET:whsec_placeholder}
+  thunes:
+    api-url: ${THUNES_API_URL:https://api-sandbox.thunes.com}
+    api-key: ${THUNES_API_KEY:}
+  fee:
+    flat-usd: 2.99
+    percent: 0
